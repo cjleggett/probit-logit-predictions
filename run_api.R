@@ -1,3 +1,3 @@
-library(dplyr)
 library(plumber)
-plumber::pr_run(plumber::plumb("api.R"), port=8000, host="0.0.0.0")
+r <- plumb("api.R")
+r$run(port=80, host="0.0.0.0")
